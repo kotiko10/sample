@@ -1,3 +1,290 @@
+/* Default styles for mobile-first */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 70px;
+}
+
+.menu-wrap {
+    width: 100%;
+    position: fixed; /* Stick the menu to the top */
+    top: 0;
+    z-index: 1000; /* Ensure it's above other content */
+    background-color: #0a094d;
+}
+
+header {
+    background-color: #0a094d;
+    padding: 10px 0;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu li {
+    display: inline-block; /* Change to inline-block for mobile */
+    margin: 0 10px; /* Adjust spacing for smaller screens */
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size for mobile */
+    padding: 10px 15px;
+    display: inline-block;
+    transition: border-color 0.3s, color 0.3s;
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    border-color: white;
+    background-color: white;
+    color: black;
+}
+
+.contact {
+    background-image: url("images/contact-us.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 90%; /* Adjust width for mobile */
+    margin: auto;
+    height: 600px; /* Adjust height for mobile */
+}
+
+.contact button {
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    border: 2px hidden rgba(255, 255, 255, 0.5); /* White border with 50% opacity */
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px; /* Adjust font size for mobile */
+    border-radius: 5px;
+    transition: background-color 0.6s, border-color 0.6s;
+}
+
+.contact button:hover {
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+
+.images {
+    width: 100%; /* Full width on mobile */
+    margin: 20px auto; /* Center align and adjust margin */
+    text-align: center; /* Center align images */
+}
+
+.images img {
+    width: 80px; /* Adjust image size for mobile */
+    height: 80px;
+    filter: grayscale(100%);
+    display: inline-block;
+    transition: filter 1s;
+    margin-bottom: 20px;
+}
+
+.images img:hover {
+    filter: grayscale(0%);
+}
+
+.about {
+    width: 100%;
+    height: auto; /* Adjust height for mobile */
+    margin: auto;
+    padding: 20px; /* Add padding for mobile */
+}
+
+.slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    height: 300px; /* Adjust height for mobile */
+    margin-top: 20px; /* Adjust margin for mobile */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%; /* Ensure slides take full height of slider */
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 100%; /* Make each slide take full height of slider */
+}
+
+.slide img {
+    width: auto;
+    max-height: 100%; /* Ensure images maintain aspect ratio */
+    display: block;
+    margin: auto; /* Center align images */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 16px; /* Adjust font size for mobile */
+    padding: 10px; /* Adjust padding for mobile */
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.indicators {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.indicator {
+    height: 10px; /* Adjust size for mobile */
+    width: 10px;
+    margin: 0 2px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: blue;
+}
+
+.info {
+    width: 100%; /* Full width on mobile */
+    margin-top: 20px; /* Adjust margin for mobile */
+    text-align: center; /* Center align content */
+}
+
+.info h5 {
+    margin-bottom: 30px; /* Adjust margin for mobile */
+    color: #333;
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    background-color: #0a094d;
+    margin: auto;
+    height: 80px; /* Adjust height for mobile */
+}
+
+.title h2 {
+    padding-top: 20px; /* Adjust padding for mobile */
+    text-align: center;
+    color: white;
+    letter-spacing: 3px; /* Adjust letter spacing for mobile */
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center team members */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #80808033;
+}
+
+.team-member {
+    width: 80%; /* Adjust width for mobile */
+    margin-bottom: 20px; /* Adjust spacing for mobile */
+    text-align: center;
+}
+
+.team-member img {
+    width: 80%; /* Adjust image size for mobile */
+    max-width: 150px; /* Adjust maximum width for mobile */
+    height: auto;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: filter 1.5s;
+}
+
+.team-member img:hover {
+    filter: grayscale(0%);
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.team-member p {
+    color: #666;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #0a094d;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.services {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically on mobile */
+    align-items: center; /* Center align items */
+}
+
+.logo {
+    width: 150px; /* Adjust logo size for mobile */
+    height: auto;
+    flex: 0 0 50%; /* Logo takes 50% of the container */
+}
+
+.text {
+    flex: 1;
+    padding: 10px; /* Add padding for mobile */
+    text-align: center; /* Center align text */
+}
+
+.text h3 {
+    letter-spacing: 2px; /* Adjust letter spacing for mobile */
+    margin-bottom: 10px;
+}
+
+.content p {
+    letter-spacing: 1px; /* Adjust letter spacing for mobile */
+    text-align: center;
+}
+
+/* Additional media queries for larger screens */
+@media only screen and (min-width: 600px) {
+    /* Adjust styles for tablets */
+    .menu li {
+        margin: 0 15px;
+    }
+}
 @media only screen and (min-width: 1200px) {
 
 body {
